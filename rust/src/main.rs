@@ -2,6 +2,8 @@ use std::env;
 use std::process;
 
 mod lox;
+mod token;
+mod token_type;
 
 fn main() {
     let mut lox = lox::Lox::new();
