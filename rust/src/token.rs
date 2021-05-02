@@ -7,6 +7,12 @@ pub struct Token {
     lexeme: String,
 
     // Consider using custom type instead of Any
-    literal: Box<dyn Any>,
+    literal: Option<Box<dyn Any>>,
     line: usize,
+}
+
+impl Token {
+    pub fn new(token_type: TokenType, lexeme: String, literal: Option<Box<dyn Any>>, line: usize) -> Self {
+        Token { token_type, lexeme, literal, line}
+    }
 }

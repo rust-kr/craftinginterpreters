@@ -4,6 +4,7 @@ use std::process;
 mod lox;
 mod token;
 mod token_type;
+mod scanner;
 
 fn main() {
     let mut lox = lox::Lox::new();
